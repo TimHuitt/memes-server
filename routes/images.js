@@ -11,11 +11,11 @@ router.post("/", imageCtrl.create);
 // GET module/:id - show
 router.get('/:id', imageCtrl.show);
 
-// UPDATE module/:id - update
-router.put('/:id', imageCtrl.update);
+// // UPDATE module/:id - update
+// router.put('/:id', imageCtrl.update);
 
-// DELETE module/:id - destroy
-router.delete('/:id', imageCtrl.delete);
+// // DELETE module/:id - destroy
+// router.delete('/:id', imageCtrl.delete);
 
 
 module.exports = router

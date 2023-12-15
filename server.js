@@ -7,7 +7,6 @@ require("dotenv").config();
 require("./config/db.connections.js")
 
 const { PORT } = process.env;
-const modulesRouter = require('./routes/images.js')
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
