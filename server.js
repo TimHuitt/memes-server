@@ -4,6 +4,7 @@ const app = express();
 const cors = require("cors")
 const morgan = require("morgan")
 const imagesRouter = require("./routes/images.js");
+const templatesRouter = require("./routes/templates.js");
 
 require("./config/db.connections.js")
 
@@ -14,10 +15,8 @@ app.use(express.json());
 app.use(morgan("dev")); 
 app.use(cors());
 
-app.use("/images", imagesRouter);
+app.use("/create", templatesRouter);
+app.use("/", imagesRouter);
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
 
 app.listen(PORT, () => console.log(`listening on PORT ${PORT}`));

@@ -15,19 +15,6 @@ const index = async (req, res, next) => {
   }
 };
 
-// const create = async (req, res, next) => {
-//   console.log('received create request');
-//   try {
-//     console.log('Request file:', req.file);
-//     console.log('Request body:', req.body);
-
-//     // Temporarily return a success response without doing any database operations
-//     res.status(200).json({ message: 'File received' });
-//   } catch (err) {
-//     res.status(400).json({ err: err.message });
-//   }
-// };
-
 const create = async (req, res, next) => {
   console.log('received create request');
   try {
