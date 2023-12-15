@@ -1,12 +1,9 @@
 const Image = require('../models/image')
 const cloudinary = require("cloudinary").v2;
 const streamifier = require("streamifier");
-const clConfig = require("../config/cloudinary");
+const cloudinaryConfig = require("../config/cloudinary").clConfigEnv;
+cloudinary.config(cloudinaryConfig);
 
-console.log(clConfig)
-cloudinary.config(clConfig);
-
-console.log('Cloudinary Config:', clConfig);
 
 const index = async (req, res, next) => {
   console.log('received index request');

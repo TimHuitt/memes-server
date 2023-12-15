@@ -1,9 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors")
 const morgan = require("morgan")
 const imagesRouter = require("./routes/images.js");
-require("dotenv").config();
+
 require("./config/db.connections.js")
 
 const { PORT } = process.env;
